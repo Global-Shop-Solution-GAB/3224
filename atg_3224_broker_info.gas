@@ -1,0 +1,244 @@
+Program.Sub.ScreenSU.Start
+gui.fBroker..create
+gui.fBroker..caption("Broker Info")
+gui.fBroker..size(4815,7095)
+gui.fBroker..position(0,0)
+gui.fBroker..event(unload,fbroker_unload)
+gui.fBroker..alwaysontop(False)
+gui.fBroker..fontname("Arial")
+gui.fBroker..fontsize(8)
+gui.fBroker..forecolor(0)
+gui.fBroker..fontstyle(,,,,)
+gui.fBroker..BackColor(-2147483633)
+gui.fBroker..controlbox(True)
+gui.fBroker..maxbutton(False)
+gui.fBroker..minbutton(True)
+gui.fBroker..mousepointer(0)
+gui.fBroker..moveable(True)
+gui.fBroker..sizeable(False)
+gui.fBroker..ShowInTaskBar(True)
+gui.fBroker..titlebar(True)
+gui.fBroker.lblName.create(label,"Broker Name",True,1935,255,1,145,200,True,0,Arial,8,-2147483633,0)
+gui.fBroker.txtName.create(textbox,"",True,4250,300,0,145,400,True,0,Arial,8,-2147483643,1)
+gui.fBroker.txtName.maxLength(60)
+gui.fBroker.lblAdd1.create(label,"Address 1",True,1935,255,1,145,785,True,0,Arial,8,-2147483633,0)
+gui.fBroker.txtAdd1.create(textbox,"",True,4250,300,0,145,985,True,0,Arial,8,-2147483643,1)
+gui.fBroker.txtAdd1.maxLength(60)
+gui.fBroker.lblAdd2.create(label,"Address 2",True,1935,255,1,145,1385,True,0,Arial,8,-2147483633,0)
+gui.fBroker.txtAdd2.create(textbox,"",True,4250,300,0,145,1595,True,0,Arial,8,-2147483643,1)
+gui.fBroker.txtAdd2.maxLength(60)
+gui.fBroker.lblAdd3.create(label,"Address 3",True,1935,255,1,145,1980,True,0,Arial,8,-2147483633,0)
+gui.fBroker.txtAdd3.create(textbox,"",True,4250,300,0,145,2200,True,0,Arial,8,-2147483643,1)
+gui.fBroker.txtAdd3.maxLength(60)
+gui.fBroker.lblAdd4.create(label,"Address 4",True,1935,255,1,145,2615,True,0,Arial,8,-2147483633,0)
+gui.fBroker.txtAdd4.create(textbox,"",True,4250,300,0,145,2815,True,0,Arial,8,-2147483643,1)
+gui.fBroker.txtAdd4.maxLength(60)
+gui.fBroker.lblAdd5.create(label,"Address 5",True,1935,255,1,145,3230,True,0,Arial,8,-2147483633,0)
+gui.fBroker.txtAdd5.create(textbox,"",True,4250,300,0,145,3440,True,0,Arial,8,-2147483643,1)
+gui.fBroker.txtAdd5.maxLength(60)
+gui.fBroker.lblCity.create(label,"City",True,1935,255,1,145,3840,True,0,Arial,8,-2147483633,0)
+gui.fBroker.txtCity.create(textbox,"",True,4250,300,0,145,4055,True,0,Arial,8,-2147483643,1)
+gui.fBroker.txtCity.maxLength(60)
+gui.fBroker.lblState.create(label,"State",True,1935,255,1,145,4470,True,0,Arial,8,-2147483633,0)
+gui.fBroker.txtState.create(textbox,"",True,540,300,0,145,4700,True,0,Arial,8,-2147483643,1)
+gui.fBroker.txtState.maxLength(2)
+gui.fBroker.lblZip.create(label,"Zip",True,1935,255,1,820,4470,True,0,Arial,8,-2147483633,0)
+gui.fBroker.txtZip.create(textbox,"",True,2550,300,0,800,4700,True,0,Arial,8,-2147483643,1)
+gui.fBroker.txtZip.maxLength(25)
+gui.fBroker.lblCountry.create(label,"Country",True,1935,255,1,145,5100,True,0,Arial,8,-2147483633,0)
+gui.fBroker.txtCountry.create(textbox,"",True,4250,300,0,145,5315,True,0,Arial,8,-2147483643,1)
+gui.fBroker.txtCountry.maxLength(60)
+gui.fBroker.cmdSave.create(button)
+gui.fBroker.cmdSave.caption("Save")
+gui.fBroker.cmdSave.visible(True)
+gui.fBroker.cmdSave.size(855,375)
+gui.fBroker.cmdSave.zorder(0)
+gui.fBroker.cmdSave.position(100,5900)
+gui.fBroker.cmdSave.enabled(True)
+gui.fBroker.cmdSave.fontname("Arial")
+gui.fBroker.cmdSave.fontsize(8)
+gui.fBroker.cmdSave.event(click,cmdsave_click)
+gui.fBroker.cmdDel.create(button)
+gui.fBroker.cmdDel.caption("Delete")
+gui.fBroker.cmdDel.visible(True)
+gui.fBroker.cmdDel.size(855,375)
+gui.fBroker.cmdDel.zorder(0)
+gui.fBroker.cmdDel.position(1080,5900)
+gui.fBroker.cmdDel.enabled(True)
+gui.fBroker.cmdDel.fontname("Arial")
+gui.fBroker.cmdDel.fontsize(8)
+gui.fBroker.cmdDel.event(click,cmddel_click)
+gui.fBroker.txtName.tabstop(True)
+gui.fBroker.txtName.tabindex(1)
+gui.fBroker.txtAdd1.tabstop(True)
+gui.fBroker.txtAdd1.tabindex(2)
+gui.fBroker.txtAdd2.tabstop(True)
+gui.fBroker.txtAdd2.tabindex(3)
+gui.fBroker.txtAdd3.tabstop(True)
+gui.fBroker.txtAdd3.tabindex(4)
+gui.fBroker.txtAdd4.tabstop(True)
+gui.fBroker.txtAdd4.tabindex(5)
+gui.fBroker.txtAdd5.tabstop(True)
+gui.fBroker.txtAdd5.tabindex(6)
+gui.fBroker.txtCity.tabstop(True)
+gui.fBroker.txtCity.tabindex(7)
+gui.fBroker.txtState.tabstop(True)
+gui.fBroker.txtState.tabindex(8)
+gui.fBroker.txtZip.tabstop(True)
+gui.fBroker.txtZip.tabindex(9)
+gui.fBroker.txtCountry.tabstop(True)
+gui.fBroker.txtCountry.tabindex(10)
+gui.fBroker.cmdSave.tabstop(True)
+gui.fBroker.cmdSave.tabindex(11)
+gui.fBroker.cmdDel.tabstop(True)
+gui.fBroker.cmdDel.tabindex(12)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Coded by: MLA
+'Project Start Date: 12/27/2010
+'Hooks:
+'  14360, 14370, or 14380 Customer Master Script Hooks
+'Notes:
+'  GKD
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+Gui.fBroker..Show
+F.Intrinsic.Control.CallSub(Load)
+
+Program.Sub.Main.End
+
+program.sub.fbroker_unload.start
+F.ODBC.Connection!con.Close
+F.Intrinsic.Control.End
+
+program.sub.fbroker_unload.end
+
+program.sub.cmdsave_click.start
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("Save_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.String.Concat("Select * from ATG_3224_BROKER_INFO where CUST_ID = '",V.Passed.000002,"'",V.Local.sSql)
+F.ODBC.Connection!con.OpenRecordsetRW("rst",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,"True")
+	F.ODBC.con!rst.AddNew
+	F.ODBC.con!rst.Set!CUST_ID(V.Passed.000002)
+	F.ODBC.con!rst.Set!NAME(V.Screen.fBroker!txtName.Text)
+	F.ODBC.con!rst.Set!ADDRESS1(V.Screen.fBroker!txtAdd1.Text)
+	F.ODBC.con!rst.Set!ADDRESS2(V.Screen.fBroker!txtAdd2.Text)
+	F.ODBC.con!rst.Set!ADDRESS3(V.Screen.fBroker!txtAdd3.Text)
+	F.ODBC.con!rst.Set!ADDRESS4(V.Screen.fBroker!txtAdd4.Text)
+	F.ODBC.con!rst.Set!ADDRESS5(V.Screen.fBroker!txtAdd5.Text)
+	F.ODBC.con!rst.Set!CITY(V.Screen.fBroker!txtCITY.Text)
+	F.ODBC.con!rst.Set!STATE(V.Screen.fBroker!txtState.Text)
+	F.ODBC.con!rst.Set!ZIP(V.Screen.fBroker!txtZip.Text)
+	F.ODBC.con!rst.Set!COUNTRY(V.Screen.fBroker!txtCountry.Text)
+	F.ODBC.con!rst.Update
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Concat("Delete ATG_BROKER_INFO where CUST_ID = '",V.Passed.000002,"'",V.Local.sSql)
+	F.ODBC.Connection!con.Execute(V.Local.sSql)
+	F.ODBC.con!rst.AddNew
+	F.ODBC.con!rst.Set!CUST_ID(V.Passed.000002)
+	F.ODBC.con!rst.Set!NAME(V.Screen.fBroker!txtName.Text)
+	F.ODBC.con!rst.Set!ADDRESS1(V.Screen.fBroker!txtAdd1.Text)
+	F.ODBC.con!rst.Set!ADDRESS2(V.Screen.fBroker!txtAdd2.Text)
+	F.ODBC.con!rst.Set!ADDRESS3(V.Screen.fBroker!txtAdd3.Text)
+	F.ODBC.con!rst.Set!ADDRESS4(V.Screen.fBroker!txtAdd4.Text)
+	F.ODBC.con!rst.Set!ADDRESS5(V.Screen.fBroker!txtAdd5.Text)
+	F.ODBC.con!rst.Set!CITY(V.Screen.fBroker!txtCITY.Text)
+	F.ODBC.con!rst.Set!STATE(V.Screen.fBroker!txtState.Text)
+	F.ODBC.con!rst.Set!ZIP(V.Screen.fBroker!txtZip.Text)
+	F.ODBC.con!rst.Set!COUNTRY(V.Screen.fBroker!txtCountry.Text)
+	F.ODBC.con!rst.Update
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Save_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmdsave_click.end
+
+program.sub.cmddel_click.start
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("Delete_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.UI.Msgbox("Are you sure you want to delete?","Delete",1,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,=,"1")
+	F.Intrinsic.String.Concat("DELETE ATG_3224_BROKER_INFO where CUST_ID = '",V.Passed.000002,"'",V.Local.sSql)
+	F.ODBC.Connection!con.Execute(V.Local.sSql)
+	Gui.fBroker.txtName.Text("")
+	Gui.fBroker.txtAdd1.Text("")
+	Gui.fBroker.txtAdd2.Text("")
+	Gui.fBroker.txtAdd3.Text("")
+	Gui.fBroker.txtAdd4.Text("")
+	Gui.fBroker.txtAdd5.Text("")
+	Gui.fBroker.txtCity.Text("")
+	Gui.fBroker.txtState.Text("")
+	Gui.fBroker.txtZip.Text("")
+	Gui.fBroker.txtCountry.Text("")
+F.Intrinsic.Control.Else
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Delete_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmddel_click.end
+
+Program.Sub.Load.Start
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("Load_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.Control.If(V.Passed.000002,=,"")
+	F.Intrinsic.Control.CallSub(Fbroker_unload)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Concat("Select * from ATG_3224_BROKER_INFO where CUST_ID = '",V.Passed.000002,"'",V.Local.sSql)
+	F.ODBC.Connection!con.OpenRecordsetRO("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,<>,"TRUE")
+		Gui.fBroker.txtName.Text(V.ODBC.con!rst.FieldValTrim!NAME)
+		Gui.fBroker.txtAdd1.Text(V.ODBC.con!rst.FieldValTrim!ADDRESS1)
+		Gui.fBroker.txtAdd2.Text(V.ODBC.con!rst.FieldValTrim!ADDRESS2)
+		Gui.fBroker.txtAdd3.Text(V.ODBC.con!rst.FieldValTrim!ADDRESS3)
+		Gui.fBroker.txtAdd4.Text(V.ODBC.con!rst.FieldValTrim!ADDRESS4)
+		Gui.fBroker.txtAdd5.Text(V.ODBC.con!rst.FieldValTrim!ADDRESS5)
+		Gui.fBroker.txtCity.Text(V.ODBC.con!rst.FieldValTrim!CITY)
+		Gui.fBroker.txtState.Text(V.ODBC.con!rst.FieldValTrim!STATE)
+		Gui.fBroker.txtZip.Text(V.ODBC.con!rst.FieldValTrim!ZIP)
+		Gui.fBroker.txtCountry.Text(V.ODBC.con!rst.FieldValTrim!COUNTRY)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.con!rst.Close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Load.End
+
+
